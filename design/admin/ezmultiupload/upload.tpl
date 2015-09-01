@@ -21,7 +21,8 @@
                 uploadURL: "{concat( 'ezmultiupload/upload/', $parent_node.node_id )|ezurl( 'no' )}",
                 uploadVars: {ldelim}
                                 '{$session_name}': '{$session_id}',
-                                'UploadButton': 'Upload'
+                                'UploadButton': 'Upload',
+                                'ezxform_token': '@$ezxFormToken@'
                             {rdelim},
                 // Filter is passed on to uploader.setFileFilter() in ez.MultiUpload
                 fileType: [{ldelim} description:"{'Allowed Files'|i18n('extension/ezmultiupload')|wash('javascript')}", extensions:'{$file_types}' {rdelim}],
